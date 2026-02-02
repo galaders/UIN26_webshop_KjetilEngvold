@@ -1,9 +1,13 @@
-export default function Todo(){
+export default function Todo({title, content, id, setTodoList}){
+    const handelClick = () => {
+        setTodoList((prev) => prev.filter(item => item.id !== id ))
+        console.log(id) 
+    }
     return (
         <article className="todo-card">
-            <h3>Todo</h3>
-            <p>Hva skal jeg gjøre? Hva er planen min?</p>
-            <button>Done</button>
+            <h3>{title}</h3>
+            <p>{content}</p>
+            <button onClick={handelClick}>Done</button>
         </article>
     )
 }
