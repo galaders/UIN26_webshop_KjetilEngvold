@@ -35,6 +35,7 @@ export default function AddForm({ onAddItem }) {
             Vare:
             <input
               type="text"
+              placeholder="legg til vare"
               value={name}
               onChange={e => setName(e.target.value)}
             />
@@ -44,6 +45,7 @@ export default function AddForm({ onAddItem }) {
             Antall:
             <input
               type="number"
+              placeholder="legg til antall"
               min="1"
               value={quantity}
               onChange={e => setQuantity(e.target.value)}
